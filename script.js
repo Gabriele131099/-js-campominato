@@ -1,14 +1,14 @@
 var arrayNum = []
 var arrayUtente = []
 var nCasuale = 16;
-var x=100
 var score = 0;
-document.getElementById("arrayNum").innerHTML = arrayUtente + " </br> " + arrayNum + " </br> " + "score: " + score
-
 for (var i = 0; i < nCasuale; i++) {
     arrayNum.push(Math.floor(Math.random()*nCasuale)) 
 }
+document.getElementById("arrayNum").innerHTML = arrayUtente + " </br> " + arrayNum + " </br> " + "score: " + score
+
 function gioca() {
+    var x=100
 
     while (x>0) {
         var utenteNumero = prompt("inserisci un numero")
@@ -23,7 +23,6 @@ function gioca() {
             score += 15
             x-=16
         }
-        
     }
     alert("Il tuo punteggio è " + score)
     document.getElementById("arrayNum").innerHTML = arrayUtente + " </br> " + arrayNum + " </br> " + "score: " + score
