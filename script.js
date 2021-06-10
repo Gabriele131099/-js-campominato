@@ -4,6 +4,7 @@ var nCasuale = 16;
 for (var i = 0; i < 16; i++) {
     arrayNum.push(Math.floor(Math.random()*nCasuale)) 
 }
+
 var x=100
 var score = 0;
 while (x>0) {
@@ -22,3 +23,4 @@ while (x>0) {
     
 }
 alert("Il tuo punteggio è " + score)
+document.getElementById("arrayNum").innerHTML = arrayUtente + " </br> " + arrayNum + " </br> " + "score: " + score
