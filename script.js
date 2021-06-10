@@ -1,12 +1,12 @@
 var arrayNum = []
 var arrayUtente = []
 var nCasuale = 16;
-for (var i = 0; i < 16; i++) {
-    arrayNum.push(Math.floor(Math.random()*nCasuale)) 
-}
-
 var x=100
 var score = 0;
+
+for (var i = 0; i < nCasuale; i++) {
+    arrayNum.push(Math.floor(Math.random()*nCasuale)) 
+}
 while (x>0) {
     var utenteNumero = prompt("inserisci un numero")
     if (arrayNum.includes(utenteNumero)) {
