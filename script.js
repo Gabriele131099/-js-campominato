@@ -2,9 +2,10 @@ var print=document.getElementById("print");
 var arrayNum = [];
 var arrayUser = [];
 
+//creo array numeri casuali
 
 //Funzione, verifica se l'elelmento è presente all'interno dell'array
-function checkArray(array, element) {
+function isInArray(array, element) {
   for ( var x = 0 ; x < array.length ; x++){
     if(element === array[x]){
       return true;
@@ -14,7 +15,7 @@ function checkArray(array, element) {
 }
 while(arrayNum.length<16){
     var numRandom = (Math.floor(Math.random()*100)+1);
-    if(!(checkArray(arrayNum, numRandom))){
+    if(!(isInArray(arrayNum, numRandom))){
         arrayNum.push(numRandom);
     }
 }
@@ -27,18 +28,17 @@ function nUtente(message){
     }
     return num;
 }
-var score =0
 // array user , richiesta numeri utenti 
+var score = 0
 while(arrayUser.length<84){
-    var nUtente = nUtente("Inserisci il numero");
-    if(!(checkArray(arrayNum, nUtente))){
-        if(!(checkArray(arrayUser, nUtente))){
-            arrayUser.push(nUtente);
-             score += 15
-
+    var insertNum = nUtente("Inserisci il numero");
+    if(!(isInArray(arrayNum, insertNum))){
+        if(!(isInArray(arrayUser, insertNum))){
+            arrayUser.push(insertNum);
+            score += 15
         }else{
             alert("il numero gia è stato inserito")
-            nUtente = nUtente("Inserisci il numero");
+            insertNum = nUtente("Inserisci il numero");
         }
     }else{
         break
