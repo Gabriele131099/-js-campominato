@@ -27,12 +27,14 @@ function nUtente(message){
     }
     return num;
 }
+var score =0
 // array user , richiesta numeri utenti 
 while(arrayUser.length<84){
     var nUtente = nUtente("Inserisci il numero");
     if(!(checkArray(arrayNum, nUtente))){
         if(!(checkArray(arrayUser, nUtente))){
             arrayUser.push(nUtente);
+             score += 15
 
         }else{
             alert("il numero gia è stato inserito")
@@ -44,7 +46,7 @@ while(arrayUser.length<84){
 }
 
 
-print.innerText += arrayUser.length;
+print.innerText += score;
 
 
 
