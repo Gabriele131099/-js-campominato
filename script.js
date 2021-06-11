@@ -31,14 +31,14 @@ function nUtente(message){
 // array user , richiesta numeri utenti 
 var score = 0
 while(arrayUser.length<84){
-    var insertNum = nUtente("Inserisci il numero");
-    if(!(isInArray(arrayNum, insertNum))){
-        if(!(isInArray(arrayUser, insertNum))){
-            arrayUser.push(insertNum);
+    var numbUser = nUtente("Inserisci il numero");
+    if(!(isInArray(arrayNum, numbUser))){
+        if(!(isInArray(arrayUser, numbUser))){
+            arrayUser.push(numbUser);
             score += 15
         }else{
             alert("il numero gia è stato inserito")
-            insertNum = nUtente("Inserisci il numero");
+            numbUser = nUtente("Inserisci il numero");
         }
     }else{
         break
