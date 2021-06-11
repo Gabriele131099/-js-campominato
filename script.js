@@ -2,17 +2,17 @@ var print=document.getElementById("print");
 var arrayNum = [];
 var arrayUser = [];
 
-//creo array numeri casuali
 
 //Funzione, verifica se l'elelmento è presente all'interno dell'array
 function isInArray(array, element) {
-  for ( var x = 0 ; x < array.length ; x++){
-    if(element === array[x]){
-      return true;
+    for ( var x = 0 ; x < array.length ; x++){
+        if(element === array[x]){
+            return true;
+        }
     }
-  }
-  return false;
+    return false;
 }
+//creo array numeri casuali
 while(arrayNum.length<16){
     var numRandom = (Math.floor(Math.random()*100)+1);
     if(!(isInArray(arrayNum, numRandom))){
