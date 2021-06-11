@@ -37,16 +37,18 @@ function gioca() {
     case 0:
         var diff = 100-16;
         var bonusScore = 1
+        print.innerHTML+="Difficoltà Bassa </br>"
         break;
-        
     case 1:
         var diff = 80 - 16;
         var bonusScore = 1.3
+        print.innerHTML+="Difficoltà Media </br>"
         break;
 
     case 2:
         var diff = 50-15;
         var bonusScore = 1.8
+        print.innerHTML+="Difficoltà Alta </br>"
         break;
     }
     while(arrayUser.length<diff){
