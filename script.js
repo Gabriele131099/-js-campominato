@@ -34,6 +34,10 @@ while(arrayUser.length<84){
     if(!(isInArray(arrayNum, insertNum))){
         if(!(isInArray(arrayUser, insertNum))){
             arrayUser.push(insertNum);
+
+        }else{
+            alert("il numero gia è stato inserito")
+            insertNum = insertNumber("Inserisci il numero");
         }
     }else{
         break
