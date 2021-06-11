@@ -2,7 +2,6 @@ var print=document.getElementById("print");
 var arrayNum = [];
 var arrayUser = [];
 
-//creo array numeri casuali
 
 //Funzione, verifica se l'elelmento è presente all'interno dell'array
 function checkArray(array, element) {
