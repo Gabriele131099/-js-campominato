@@ -30,7 +30,26 @@ function nUtente(message){
 var score = 0
 var flag = false
 function gioca() {
-    while(arrayUser.length<84){
+
+    var difficoltà = parseInt(prompt("scegli una difficolta fra 0 e 2"))
+    switch (difficoltà) 
+    {
+    case 0:
+        var diff = 100-16;
+        var bonusScore = 1
+        break;
+        
+    case 1:
+        var diff = 80 - 16;
+        var bonusScore = 1.3
+        break;
+
+    case 2:
+        var diff = 50-15;
+        var bonusScore = 1.8
+        break;
+    }
+    while(arrayUser.length<diff){
         var numbUser = nUtente("Inserisci il numero");
         if(!(isInArray(arrayNum, numbUser))){
             if(!(isInArray(arrayUser, numbUser))){
@@ -48,10 +67,10 @@ function gioca() {
         }
     }  
     if (!flag) {
-        print.innerHTML +="HAI VINTO </br>Il tuo punteggio è : "+  + score  + "</br> I tuoi numeri sono: " + arrayUser + "</br> Le mine hanno i seguenti numeri: " + arrayNum;k
+        print.innerHTML +="HAI VINTO </br>Il tuo punteggio è : "+  + score*bonusScore  + "</br> I tuoi numeri sono: " + arrayUser + "</br> Le mine hanno i seguenti numeri: " + arrayNum;k
     
     } else {
-        print.innerHTML +="HAI PERSO </br>Il tuo punteggio è : "+  + score  + "</br> I tuoi numeri sono: " + arrayUser + "</br> Le mine hanno i seguenti numeri: " + arrayNum;k
+        print.innerHTML +="HAI PERSO </br>Il tuo punteggio è : "+  + score*bonusScore  + "</br> I tuoi numeri sono: " + arrayUser + "</br> Le mine hanno i seguenti numeri: " + arrayNum;k
     
     }
 }
