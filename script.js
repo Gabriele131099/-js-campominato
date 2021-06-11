@@ -4,6 +4,15 @@ var arrayUser = [];
 
 //creo array numeri casuali
 
+//Funzione che dato in ingresso un array e un elemento, verifica se l'elelmento è presente all'interno dell'array
+function isInArray(array, element) {
+  for ( var x = 0 ; x < array.length ; x++){
+    if(element === array[x]){
+      return true;
+    }
+  }
+  return false;
+}
 while(arrayNum.length<16){
     var numRandom = (Math.floor(Math.random()*100)+1);
     if(!(isInArray(arrayNum, numRandom))){
@@ -31,15 +40,6 @@ while(arrayUser.length<84){
     }
 }
 
-//Funzione che dato in ingresso un array e un elemento, verifica se l'elelmento è presente all'interno dell'array
-function isInArray(array, element) {
-  for ( var x = 0 ; x < array.length ; x++){
-    if(element === array[x]){
-      return true;
-    }
-  }
-  return false;
-}
 
 print.innerText += arrayUser.length;
 
